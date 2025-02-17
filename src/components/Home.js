@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './home.css';
 import logo from '../images/logo.jpg';
+import albumsData from '../albums.json';
+import Modal from './modal';
 
 const Home = () => {
+    const [albums, setAlbums] = useState([]);
+    const [selectedAlbum, setSelectedAlbum] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        setAlbums(albumsData);
+    }, []);
+
+    const handleAlbumClick = (album) => {
+        setSelectedAlbum(album);
+        setShowModal(true);
+    };
+
+    const getAlbumCover = (cover) => {
+        try {
+            return require(`../${cover}`);
+        } catch (err) {
+            console.error("Image not found:", cover);
+            return null;
+        }
+    };
+
     return (
         <div className="home-container">
             <header className="hero-section">
@@ -23,11 +47,15 @@ const Home = () => {
             </section>
             <section id="music" className="music-section">
                 <h2>My Music</h2>
-                <div className="music-gallery">
-                    <div className="music-item">Track 1</div>
-                    <div className="music-item">Track 2</div>
-                    <div className="music-item">Track 3</div>
+                <div className="album-gallery">
+                    {albums.map((album) => (
+                        <div key={album.id} className="album-item" onClick={() => handleAlbumClick(album)}>
+                            <img src={getAlbumCover(album.cover)} alt={album.title} className="album-cover" />
+                            <p>{album.title}</p>
+                        </div>
+                    ))}
                 </div>
+                <Modal show={showModal} onClose={() => setShowModal(false)} album={selectedAlbum} />
             </section>
             <section id="art" className="art-section">
                 <h2>My Art</h2>

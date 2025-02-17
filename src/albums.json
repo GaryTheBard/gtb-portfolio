@@ -1,0 +1,80 @@
+[
+    {
+      "id": 1,
+      "title": "Greatest Hits",
+      "cover": "images/album-images/greatesthitscover1.png",
+      "year": "2020",
+      "links": {
+        "spotify": "https://open.spotify.com/album/2AX3c4d8f0Ho0e2sSSMvl8",
+        "appleMusic": "https://music.apple.com/us/album/greatest-hits/1496272229",
+        "amazonMusic": "https://music.amazon.com/albums/B0842YWFX1",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_kBAg4MqbWW4-h49rNF3fj6pi_5q31-Rig"
+      },
+      "description": "My debut album. A collection of songs written and recorded between 2009-2020."
+    },
+    {
+      "id": 2,
+      "title": "Child Of Sin",
+      "cover": "images/album-images/childofsincover.png",
+      "year": "2021",
+      "links": {
+        "spotify": "https://open.spotify.com/album/6XuT1AwDgFeubOvxclVwal",
+        "appleMusic": "https://music.apple.com/us/album/child-of-sin/1558216718",
+        "amazonMusic": "https://music.amazon.com/albums/B08YS515B5",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_lsKVTKXB7o-7WcMnh_0mFGeWjJY5kJL9E"
+      },
+      "description": "Gary The Bard goes metal. Largely influenced by the music of Doom Eternal."
+    },
+    {
+      "id": 3,
+      "title": "Dream Killer",
+      "cover": "images/album-images/dreamkillercover.png",
+      "year": "2022",
+      "links": {
+        "spotify": "https://open.spotify.com/album/7CXmQUZR4UffmF6kUPXE4c",
+        "appleMusic": "https://music.apple.com/us/album/dream-killer/1649279572",
+        "amazonMusic": "https://music.amazon.com/albums/B0BHW2K2KL",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_mSuERfM0h3q40Pmpc5SPU-PRBWop1MXFc"
+      },
+      "description": "An album about how the pursuit of the American Dream kills your actual dreams."
+    },
+    {
+      "id": 4,
+      "title": "On Sale",
+      "cover": "images/album-images/onSalecover.png",
+      "year": "2023",
+      "links": {
+        "spotify": "https://open.spotify.com/album/38pTPygF39cJxrZ8m3l6Rz",
+        "appleMusic": "https://music.apple.com/us/album/on-sale/1682793753",
+        "amazonMusic": "https://music.amazon.com/albums/B0C2NK8LHS",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_nDvC6d3O9BPoCWBpBaj1x5TMvYKxV0A6Q"
+      },
+      "description": "Description of Album 4."
+    },
+    {
+      "id": 5,
+      "title": "G'h'oat",
+      "cover": "images/album-images/ghoatcover.png",
+      "year": "2024",
+      "links": {
+        "spotify": "https://open.spotify.com/album/0wssRYuq8ccxBDMMPvNH5N",
+        "appleMusic": "https://music.apple.com/us/album/ghoat/1756599035",
+        "amazonMusic": "https://music.amazon.com/albums/B0D93GMQTB",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_mnodPpi5fxQDGzXy0WL1HCEpr1lBaVtQQ"
+      },
+      "description": "Description of Album 5."
+    },
+    {
+      "id": 6,
+      "title": "Music For Roleplaying",
+      "cover": "images/album-images/musicForRoleplayingcover.png",
+      "year": "2025",
+      "links": {
+        "spotify": "https://open.spotify.com/album/7aORQdwU3wckOw4CKDnRah",
+        "appleMusic": "https://music.apple.com/us/album/music-for-roleplaying-orchestral-instrumental-works/1756784345",
+        "amazonMusic": "https://music.amazon.com/albums/B0D952Y5ZD",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_nbN4SPTTYeWHpYKTLjC3ZveIm06lvow3w"
+      },
+      "description": "Description of Album 6."
+    }
+]
