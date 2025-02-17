@@ -1,0 +1,134 @@
+/* src/components/home.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.home-container {
+    font-family: 'Garamond', serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+.hero-section {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.nav-menu {
+    margin-top: 20px;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em; /* Make buttons bigger */
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #000; /* Hover color change */
+}
+
+.hero-title {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-top: 5px;
+    font-family: 'Cinzel', serif;
+}
+
+.about-section, .music-section, .art-section, .games-section, .contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 20px;
+}
+
+.about-section h2, .music-section h2, .art-section h2, .games-section h2, .contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+    color: #4a4a4a;
+}
+
+.about-section p, .music-section p, .art-section p, .games-section p, .contact-section p {
+    font-size: 1.2em;
+    font-family: 'Merriweather', serif;
+    color: #555;
+}
+
+.music-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.music-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.music-item:hover {
+    transform: scale(1.05);
+}
+
+.footer-section {
+    background-color: #000; /* Black footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
