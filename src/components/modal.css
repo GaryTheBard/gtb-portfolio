@@ -64,10 +64,12 @@
 
 .modal-links {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Adjust gap */
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove margin */
 }
 
 .modal-links li {
@@ -76,16 +78,28 @@
     justify-content: center;
 }
 
-
 .modal-links img:hover {
     transform: scale(1.1);
 }
 
 .modal-links img {
     width: auto; /* Allow the width to adjust automatically */
-    height: 40px; /* Set a consistent height */
+    height: 40px; /* Set consistent height */
     transition: transform 0.3s;
     padding: 5px;
 }
 
+@media (max-width: 767px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px; /* Adjust padding for mobile */
+    }
 
+    .modal-links {
+        gap: 10px; /* Adjust gap for mobile */
+    }
+
+    .modal-links img {
+        height: 35px; /* Adjust icon size for mobile */
+    }
+}
