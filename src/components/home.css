@@ -14,14 +14,6 @@ html, body {
     box-sizing: inherit;
 }
 
-/*
-.home-container {
-    font-family: 'Lora', serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #183D3D;
-}*/
-
 .hero-section {
     background-color: #000;
     color: #fff;
@@ -41,6 +33,9 @@ html, body {
 
 .nav-menu {
     margin-top: 20px;
+    width: 60vw; /* Make the menu fit within the viewport width */
+    display: flex;
+    justify-content: center;
 }
 
 .nav-menu ul {
@@ -48,6 +43,8 @@ html, body {
     justify-content: center;
     list-style: none;
     padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure the ul takes up the full width of the menu */
 }
 
 .nav-menu ul li {
@@ -78,8 +75,9 @@ html, body {
     background-color: black;
     margin: 20px;
 }
+
 /* Music section black background  */
-.music-section{
+.music-section {
     padding: 10px 20px;
     text-align: center;
     border: 1px solid black;
@@ -138,7 +136,6 @@ html, body {
     text-align: left; /* Align text to the left for better readability */
     max-width: 100%;
 }
-
 
 .album-gallery {
     display: grid;
@@ -207,7 +204,6 @@ html, body {
     margin: 0 auto; /* Center the image within the div */
 }
 
-
 .carousel-slide {
     display: flex;
     flex-direction: column;
@@ -223,7 +219,7 @@ html, body {
     max-width: 450px; /* Set the maximum width of the image */
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Ensure the image is treated as a block element */
-    margin:  auto 20px; /* Center the image and add bottom margin */
+    margin: auto 20px; /* Center the image and add bottom margin */
     padding: 5px;
 }
 
@@ -245,4 +241,65 @@ html, body {
 .email-link:hover {
     color: white; /* Optionally, change color on hover */
     text-decoration: underline; /* Optionally, add underline on hover */
+}
+
+/* Adjust carousel for mobile */
+@media (max-width: 767px) {
+    .carousel .slide {
+        width: 100%;
+    }
+
+    .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+        opacity: 1;
+        cursor: pointer;
+        background: none;
+        color: #000;
+        font-size: 18px;
+    }
+
+    .carousel .carousel-status {
+        font-size: 14px;
+    }
+
+    .art-image {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Adjust games section for mobile */
+@media (max-width: 767px) {
+    .game-iframe {
+        display: block;
+    }
+
+    .game-iframe iframe {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* General mobile adjustments */
+@media (max-width: 767px) {
+    .home-container {
+        padding: 10px;
+    }
+
+    .hero-section {
+        padding: 15px;
+    }
+
+    .about-section, .music-section, .art-section, .games-section, .contact-section {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .album-gallery {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .album-item {
+        width: 100%;
+    }
 }

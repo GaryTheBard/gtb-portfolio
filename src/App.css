@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /*This property sets the background color of the site*/
+  /* This property sets the background color of the site */
   background: black;
 }
 
@@ -15,11 +15,12 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  background: #333;
+  width: 100%;
+  padding: 0 10%;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 5%;
 }
 
 nav ul li a {
@@ -33,5 +34,86 @@ nav ul li a:hover {
 }
 
 .section {
-  padding: 20px;
+  padding: 2em;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+
+  .section {
+      padding: 10px;
+  }
+
+  .app {
+      padding: 10px;
+  }
+}
+
+/* Adjust carousel for mobile */
+@media (max-width: 767px) {
+  .carousel .slide {
+      width: 100%;
+  }
+
+  .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+      opacity: 1;
+      cursor: pointer;
+      background: none;
+      color: #000;
+      font-size: 18px;
+  }
+
+  .carousel .carousel-status {
+      font-size: 14px;
+  }
+
+  .art-image {
+      width: 100%;
+      max-width: 100%;
+      margin: 10px 0;
+  }
+}
+
+/* Adjust games section for mobile */
+@media (max-width: 767px) {
+  .game-iframe {
+      display: block;
+  }
+
+  .game-iframe iframe {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+/* General mobile adjustments */
+@media (max-width: 767px) {
+  .home-container {
+      padding: 10px;
+  }
+
+  .hero-section {
+      padding: 15px;
+  }
+
+  .about-section, .music-section, .art-section, .games-section, .contact-section {
+      padding: 15px;
+      margin: 10px 0;
+  }
+
+  .album-gallery {
+      grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .album-item {
+      width: 100%;
+  }
 }
