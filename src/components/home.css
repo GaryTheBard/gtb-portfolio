@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=MedievalSharp&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
@@ -12,12 +14,13 @@ html, body {
     box-sizing: inherit;
 }
 
+/*
 .home-container {
     font-family: 'Lora', serif;
     color: #333;
     line-height: 1.6;
-    background-color: #f0f0f0;
-}
+    background-color: #183D3D;
+}*/
 
 .hero-section {
     background-color: #000;
@@ -66,28 +69,76 @@ html, body {
     color: #000;
 }
 
-.about-section, .music-section, .art-section, .games-section, .contact-section {
-    padding: 40px 20px;
+.art-section, .games-section, .contact-section {
+    padding: 10px 20px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: black;
+    margin: 20px;
+}
+/* Music section black background  */
+.music-section{
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #000000;
     margin: 20px;
 }
 
 .about-section h2, .music-section h2, .art-section h2, .games-section h2, .contact-section h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
-    font-family: 'Cinzel', serif;
-    color: #4a4a4a;
+    margin-bottom: 5px;
+    font-family: 'MedievalSharp', sans-serif;
+    color: white;
+}
+
+.about-section h2::first-letter, 
+.music-section h2::first-letter, 
+.art-section h2::first-letter, 
+.games-section h2::first-letter, 
+.contact-section h2::first-letter {
+    color: #a40706;
 }
 
 .about-section p, .music-section p, .art-section p, .games-section p, .contact-section p {
-    font-size: 1.2em;
-    font-family: 'Merriweather', serif;
-    color: #555;
+    font-size: 1.0em;
+    font-family: 'Eagle Lake', serif;
+    color: white;
 }
+
+.about-section {
+    padding: 40px 20px;
+    text-align: center; /* Center-align the entire section initially */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    margin: 20px auto;
+    max-width: 1200px; /* Set a maximum width to avoid wide text */
+    font-family: 'Merriweather', serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'MedievalSharp', sans-serif;
+    color: white;
+    text-align: center; /* Ensure the header is centered */
+}
+
+.about-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    font-family: 'Eagle Lake', serif;
+    text-align: left; /* Align text to the left for better readability */
+    max-width: 100%;
+}
+
 
 .album-gallery {
     display: grid;
@@ -107,11 +158,12 @@ html, body {
 }
 
 .album-cover {
-    width: 100%;
+    width: 80%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(71, 71, 71);
 }
 
 .footer-section {
@@ -131,12 +183,12 @@ html, body {
 }
 
 .art-section {
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: black;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 10px;
 }
 
 .carousel-slide {
@@ -149,7 +201,7 @@ html, body {
 
 .art-image {
     width: 100%; /* Make the image responsive */
-    max-width: 450px; /* Set the maximum width of the image */
+    max-width: 5000px; /* Set the maximum width of the image */
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Ensure the image is treated as a block element */
     margin: 0 auto; /* Center the image within the div */
@@ -162,6 +214,8 @@ html, body {
     align-items: center; 
     justify-content: center; 
     padding: 20px 0; /* Add padding to provide space around the content */
+    font-family: 'Eagle Lake', serif;
+    color: white;
 }
 
 .art-image {
@@ -169,7 +223,8 @@ html, body {
     max-width: 450px; /* Set the maximum width of the image */
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Ensure the image is treated as a block element */
-    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    margin:  auto 20px; /* Center the image and add bottom margin */
+    padding: 5px;
 }
 
 .legend {
@@ -180,4 +235,14 @@ html, body {
     text-align: center;
     width: 100%;
     margin-top: 20px; /* Ensure there's space between the image and the label */
+}
+
+.email-link {
+    color: red; /* Set the color to red */
+    text-decoration: none; /* Remove underline */
+}
+
+.email-link:hover {
+    color: white; /* Optionally, change color on hover */
+    text-decoration: underline; /* Optionally, add underline on hover */
 }

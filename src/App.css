@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f7f7f7;
+  /*This property sets the background color of the site*/
+  background: black;
 }
 
 .app {

@@ -8,15 +8,18 @@ import youtubeLogo from '../images/logos/youtube1.png';
 const Modal = ({ show, onClose, album }) => {
     if (!show) return null;
 
+    const handleOverlayClick = (e) => {
+        // Check if the click is on the overlay and not on the content
+        if (e.target.className === 'modal-overlay') {
+            onClose();
+        }
+    };
+
     return (
-        <div className="modal-overlay">
+        <div className="modal-overlay" onClick={handleOverlayClick}>
             <div className="modal-content">
                 <span className="modal-close" onClick={onClose}>&times;</span>
                 <img src={require(`../${album.cover}`)} alt={album.title} className="modal-cover" />
-                <h3>{album.title}</h3>
-                <p>{album.description}</p>
-                <h4>Year: {album.year}</h4>
-                <h4>Stream or buy here</h4>
                 <ul className="modal-links">
                     {album.links.spotify && (
                         <li>
