@@ -3,6 +3,9 @@ import './home.css';
 import logo from '../images/logo.jpg';
 import albumsData from '../albums.json';
 import Modal from './modal';
+import ArtCarousel from './artCarousel'
+import artData from '../art.json'
+//import artData from '../artData.js'
 
 const Home = () => {
     const [albums, setAlbums] = useState([]);
@@ -43,7 +46,7 @@ const Home = () => {
             </header>
             <section id="about" className="about-section">
                 <h2>About Me</h2>
-                <p>Hi, I'm [Artist Name], a passionate musician dedicated to creating inspiring music. Stay tuned for my latest updates and releases.</p>
+                <p>Hi, I'm Gary The Bard and I like to make things. <br></br>By day, I embody the life of a corprate America Software Engineer, by night my true form emerges and art flows out of me. <br></br>Art School Graduate, Museum reject.</p>
             </section>
             <section id="music" className="music-section">
                 <h2>My Music</h2>
@@ -59,11 +62,18 @@ const Home = () => {
             </section>
             <section id="art" className="art-section">
                 <h2>My Art</h2>
-                <p>Explore my artistic creations and visual artworks.</p>
+                <ArtCarousel artPieces={artData} />
             </section>
             <section id="games" className="games-section">
                 <h2>My Games</h2>
-                <p>Discover the games I've developed and collaborated on.</p>
+                <div className="game-iframe">
+                    <iframe frameborder="0" src="https://itch.io/embed/267687" width="552" height="167">
+                        <a href="https://garythebard.itch.io/half-empty">Half Empty by Gary The Bard</a>
+                    </iframe>
+                    <iframe frameborder="0" src="https://itch.io/embed/262803" width="552" height="167">
+                        <a href="https://garythebard.itch.io/the-cartographers-tale">The Cartographer's Tale by Gary The Bard</a>
+                    </iframe>
+                </div>
             </section>
             <section id="contact" className="contact-section">
                 <h2>Contact</h2>
