@@ -69,7 +69,7 @@ const Home = () => {
     Additionally, I've ventured into animation, transforming hand-drawn sketches into lively digital puppets. My exploration extends to 3D modeling, with several creations crafted in Blender and Maya. As a texture artist, I bring depth and detail to my models, adding the finishing touches that make them come alive.
     </p>
     <p>
-    Professionally, I have worked in the pharmaceutical, manufacturing, and entertainment industries. I currently make a living as a full-stack software developer, predominantly experienced with Java, 
+    Professionally, I have worked in the pharmaceutical, manufacturing, fintech, and entertainment industries. I currently make a living as a full-stack software developer, predominantly experienced with Java, 
     Spring, JavaScript, React, C#, and SQL. This diverse background has equipped me with the skills to merge technology with art seamlessly. Whether it's creating custom tools for my projects or developing innovative solutions, I find joy in the intersection of these two worlds.
     </p>
     <p>
