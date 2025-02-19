@@ -48,7 +48,7 @@ const Home = () => {
             <section id="about" className="about-section">
     <h2>{artistName}</h2>
     <p>
-        Hi, I'm {artistName}, a multifaceted artist and technologist with a passion for creating and exploring various forms of expression. 
+        Hi, I'm {artistName}, a multifaceted artist and software engineer with a passion for creating and exploring various forms of expression. 
         By day, I navigate corporate America as a Software Engineer, solving complex problems and building innovative solutions. 
         By night, I transform into my true artistic self, immersing myself in the world of art and creativity. 
         As an Art School Graduate and a Museum reject, I take pride in my unique journey and the unconventional path I've chosen.
