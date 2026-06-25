@@ -49,7 +49,7 @@
         "amazonMusic": "https://music.amazon.com/albums/B0C2NK8LHS",
         "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_nDvC6d3O9BPoCWBpBaj1x5TMvYKxV0A6Q"
       },
-      "description": "Description of Album 4."
+      "description": "A mockery of rising prices and the absurdity of perpetual sales."
     },
     {
       "id": 5,
@@ -62,7 +62,7 @@
         "amazonMusic": "https://music.amazon.com/albums/B0D93GMQTB",
         "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_mnodPpi5fxQDGzXy0WL1HCEpr1lBaVtQQ"
       },
-      "description": "Description of Album 5."
+      "description": "A collection of songs from a distinct chapter in my creative journey."
     },
     {
       "id": 6,
@@ -75,6 +75,19 @@
         "amazonMusic": "https://music.amazon.com/albums/B0D952Y5ZD",
         "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_nbN4SPTTYeWHpYKTLjC3ZveIm06lvow3w"
       },
-      "description": "Description of Album 6."
+      "description": "A collection of orchestral and instrumental works that would feel at home in a video game."
+    },
+    {
+      "id": 7,
+      "title": "Era 7: Year 18",
+      "cover": "images/album-images/Era7.png",
+      "year": "2025",
+      "links": {
+        "spotify": "https://open.spotify.com/album/2515QSNnG8HQHmONqZeIDA",
+        "appleMusic": "https://music.apple.com/us/album/era-7-year-18/1827614279",
+        "amazonMusic": "https://music.amazon.com/albums/B0FHZ2HHWS",
+        "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_m1btJUl4dwVGkDpRAzWYvMYMTGxBaYZJY"
+      },
+      "description": "A 10-track release and the next chapter in the Gary The Bard catalog."
     }
 ]
