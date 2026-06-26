@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import './home.css';
 import logo from '../images/garythebardlogo.png';
 import albumsData from '../albums.json';
@@ -45,6 +46,23 @@ const Home = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeVideoIndex, setActiveVideoIndex] = useState(0);
     const [activeSection, setActiveSection] = useState('about');
+
+    useEffect(() => {
+        if (!isMobileMenuOpen) {
+            return undefined;
+        }
+
+        const closeOnEscape = (event) => {
+            if (event.key === 'Escape') {
+                setIsMobileMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('keydown', closeOnEscape);
+        return () => {
+            window.removeEventListener('keydown', closeOnEscape);
+        };
+    }, [isMobileMenuOpen]);
 
     useEffect(() => {
         const sortedAlbums = [...albumsData].sort((a, b) => {
@@ -119,6 +137,44 @@ const Home = () => {
         setIsMobileMenuOpen(false);
     };
 
+    const mobileMenu = (
+        <>
+            <button
+                type="button"
+                className={`menu-toggle mobile-nav-portal ${isMobileMenuOpen ? 'is-menu-open' : ''}`}
+                onClick={() => setIsMobileMenuOpen((open) => !open)}
+                aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-nav-panel"
+            >
+                <span />
+                <span />
+                <span />
+            </button>
+
+            <nav
+                className={`mobile-nav-panel ${isMobileMenuOpen ? 'is-open' : ''}`}
+                id="mobile-nav-panel"
+                aria-label="Mobile primary"
+                hidden={!isMobileMenuOpen}
+            >
+                <ul>
+                    {navItems.map((item) => (
+                        <li key={item.id}>
+                            <a
+                                href={`#${item.id}`}
+                                onClick={handleNavClick}
+                                className={activeSection === item.id ? 'nav-link-active' : ''}
+                            >
+                                {item.label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </>
+    );
+
     const showPreviousVideo = () => {
         setActiveVideoIndex((currentIndex) => {
             if (currentIndex === 0) {
@@ -145,29 +201,16 @@ const Home = () => {
         <div className="home-container">
             <header className="hero-section">
                 <div className="hero-overlay" />
-                <button
-                    type="button"
-                    className="menu-toggle"
-                    onClick={() => setIsMobileMenuOpen((open) => !open)}
-                    aria-label="Toggle navigation menu"
-                    aria-expanded={isMobileMenuOpen}
-                    aria-controls="primary-navigation"
-                >
-                    <span />
-                    <span />
-                    <span />
-                </button>
                 <div className="logo-shell">
                     <img src={logo} alt={`${artistName} logo`} className="logo" />
                 </div>
                 <p className="hero-tagline">{tagline}</p>
-                <nav className={`nav-menu ${isMobileMenuOpen ? 'nav-menu-open' : ''}`} id="primary-navigation">
+                <nav className="nav-menu desktop-nav" id="primary-navigation" aria-label="Primary">
                     <ul>
                         {navItems.map((item) => (
                             <li key={item.id}>
                                 <a
                                     href={`#${item.id}`}
-                                    onClick={handleNavClick}
                                     className={activeSection === item.id ? 'nav-link-active' : ''}
                                 >
                                     {item.label}
@@ -314,6 +357,7 @@ const Home = () => {
             <footer className="footer-section">
                 <p>&copy; {new Date().getFullYear()} {artistName}. All rights reserved.</p>
             </footer>
+            {typeof document !== 'undefined' ? createPortal(mobileMenu, document.body) : null}
         </div>
     );
 };
