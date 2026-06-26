@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
-import logo from '../images/logo.jpg';
+import logo from '../images/garythebardlogo.png';
 import albumsData from '../albums.json';
 import Modal from './modal';
 import ArtCarousel from './artCarousel';
@@ -145,17 +145,6 @@ const Home = () => {
         <div className="home-container">
             <header className="hero-section">
                 <div className="hero-overlay" />
-                <div className="logo-shell">
-                    <img src={logo} alt={`${artistName} logo`} className="logo" />
-                </div>
-                <p className="hero-tagline">{tagline}</p>
-                <p className="hero-intro">
-                    Psychedelic folk roots, genre-bending compositions, and handcrafted visual worlds.
-                </p>
-                <div className="hero-actions">
-                    <a href="#music" className="hero-button hero-button-primary">Listen</a>
-                    <a href="#art" className="hero-button">View Art</a>
-                </div>
                 <button
                     type="button"
                     className="menu-toggle"
@@ -168,6 +157,10 @@ const Home = () => {
                     <span />
                     <span />
                 </button>
+                <div className="logo-shell">
+                    <img src={logo} alt={`${artistName} logo`} className="logo" />
+                </div>
+                <p className="hero-tagline">{tagline}</p>
                 <nav className={`nav-menu ${isMobileMenuOpen ? 'nav-menu-open' : ''}`} id="primary-navigation">
                     <ul>
                         {navItems.map((item) => (
@@ -193,7 +186,7 @@ const Home = () => {
                     <article className="about-card">
                         <h3>Musician</h3>
                         <p>
-                            I have released six albums and continue to blend psychedelic folk rock with country,
+                            I have released seven albums and continue to blend psychedelic folk rock with country,
                             jazz, classical, hip-hop, metal, and pop influences.
                         </p>
                     </article>
@@ -267,7 +260,6 @@ const Home = () => {
 
             <section id="music" className="music-section reveal-on-scroll">
                 <h2>Music</h2>
-                <p className="section-intro">Select an album cover to open streaming links.</p>
                 <div className="album-gallery">
                     {albums.map((album) => (
                         <button key={album.id} type="button" className="album-item" onClick={() => handleAlbumClick(album)}>
@@ -278,7 +270,6 @@ const Home = () => {
                                 loading="lazy"
                                 decoding="async"
                             />
-                            <span className="album-title">{album.title}</span>
                         </button>
                     ))}
                 </div>
